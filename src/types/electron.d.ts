@@ -4,6 +4,7 @@ export interface ElectronAPI {
   readFile: (filepath: string) => Promise<string>;
   saveFile: (filepath: string, content: string) => Promise<{ success: boolean }>;
   createFile: (folderPath: string, filename: string) => Promise<string>;
+  deleteFile: (filepath: string) => Promise<{ success: boolean }>;
 }
 
 export interface FileItem {

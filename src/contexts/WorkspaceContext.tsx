@@ -35,6 +35,12 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const loadFile = useCallback(async (path: string) => {
+    if (!path) {
+      setCurrentFile(null);
+      setCurrentContent('');
+      return;
+    }
+    
     const content = await window.api.readFile(path);
     setCurrentFile(path);
     setCurrentContent(content);

@@ -249,3 +249,14 @@ function scanDirectory(dirPath) {
         });
     });
 }
+
+// Delete file
+ipcMain.handle('delete-file', async (_, filepath) => {
+  try {
+    await fs.unlink(filepath);
+    return { success: true };
+  } catch (error) {
+    console.error('Error deleting file:', error);
+    throw error;
+  }
+});
