@@ -1,56 +1,31 @@
-import { useState } from 'react';
+import { WorkspaceProvider } from './contexts/WorkspaceContext';
+import WorkspaceSelector from './components/workspace/WorkspaceSelector';
+import FileSidebar from './components/sidebar/FileSidebar';
+import NoteEditor from './components/editor/NoteEditor';
+import { useWorkspace } from './contexts/WorkspaceContext';
 
-function App() {
-  const [workspace, setWorkspace] = useState<string | null>(null);
-  const [files, setFiles] = useState<any[]>([]);
+function AppContent() {
+  const { workspacePath } = useWorkspace();
 
-  const handleSelectWorkspace = async () => {
-    const path = await window.api.selectWorkspace();
-    if (path) {
-      setWorkspace(path);
-      const workspaceFiles = await window.api.readWorkspace(path);
-      setFiles(workspaceFiles);
-    }
-  };
+  if (!workspacePath) {
+    return <WorkspaceSelector />;
+  }
 
   return (
-    <div style={{ 
-      padding: '20px', 
-      fontFamily: 'system-ui, sans-serif',
-      background: '#1a1a1a',
-      color: '#fff',
-      minHeight: '100vh'
-    }}>
-      <h1>🗺️ Atlas Workspace Local</h1>
-      
-      <button 
-        onClick={handleSelectWorkspace}
-        style={{
-          padding: '12px 24px',
-          fontSize: '16px',
-          background: '#3b82f6',
-          color: 'white',
-          border: 'none',
-          borderRadius: '6px',
-          cursor: 'pointer',
-          marginTop: '20px'
-        }}
-      >
-        Open Workspace
-      </button>
-
-      {workspace && (
-        <div style={{ marginTop: '20px' }}>
-          <h2>Workspace: {workspace}</h2>
-          <h3>Files ({files.length}):</h3>
-          <ul>
-            {files.map((file, i) => (
-              <li key={i}>{file.name}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+    <div className="flex h-screen bg-gray-950 text-gray-100">
+      <FileSidebar />
+      <div className="flex-1">
+        <NoteEditor />
+      </div>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <WorkspaceProvider>
+      <AppContent />
+    </WorkspaceProvider>
   );
 }
 
