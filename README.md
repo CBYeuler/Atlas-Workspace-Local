@@ -1,6 +1,10 @@
-# note 1770998228778
+
+
 
 # Atlas Workspace
+
+
+<img width="1395" height="934" alt="Atlasss" src="https://github.com/user-attachments/assets/2a42d34d-c85e-471e-a51a-96a4e234b33b" />
 
 **A modern, offline-first markdown/pdf workspace for developers**
 
