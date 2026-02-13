@@ -3,6 +3,17 @@
 
 # Atlas Workspace
 
+![Version](https://img.shields.io/badge/version-1.0.0-blue?style=flat)
+![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Electron](https://img.shields.io/badge/Electron-28+-47848F?style=flat&logo=electron)
+![React](https://img.shields.io/badge/React-18+-61DAFB?style=flat&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5+-3178C6?style=flat&logo=typescript)
+![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows%20%7C%20Linux-lightgrey?style=flat)
+![Issues](https://img.shields.io/github/issues/CBYeuler/Atlas-Workspace-Local)
+![Stars](https://img.shields.io/github/stars/CBYeuler/Atlas-Workspace-Local)
+![Last Commit](https://img.shields.io/github/last-commit/CBYeuler/Atlas-Workspace-Local)
+
 
 <img width="1395" height="934" alt="Atlasss" src="https://github.com/user-attachments/assets/2a42d34d-c85e-471e-a51a-96a4e234b33b" />
 
