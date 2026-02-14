@@ -3,7 +3,7 @@
 
 # Atlas Workspace
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue?style=flat)
+![Version](https://img.shields.io/badge/version-1.1.0-blue?style=flat)
 ![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Electron](https://img.shields.io/badge/Electron-28+-47848F?style=flat&logo=electron)
