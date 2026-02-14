@@ -3,3 +3,8 @@ dist/
 dist-electron/
 *.tsbuildinfo
 .env
+*.d.ts
+*.js.map
+electron/*.js
+electron/*.d.ts
+dist-electron/
