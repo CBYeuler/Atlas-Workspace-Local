@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed .gitignore to exclude future compiled files
 
 ###  Acknowledgments
-Special thanks to **@dreamer_94** for the detailed code review and suggestions that shaped this release:
+Special thanks to **@dreamer_948** for the detailed code review and suggestions that shaped this release:
 - Pointed out the TypeScript compilation artifacts issue
 - Suggested hash routing for better scalability
 - Recommended build configuration improvements
