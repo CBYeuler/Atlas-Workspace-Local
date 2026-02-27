@@ -3,68 +3,76 @@
 
 @layer base {
   :root {
-    --background: 220 14% 96%;
-    --foreground: 224 20% 12%;
-    --card: 0 0% 100%;
-    --card-foreground: 224 20% 12%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 20% 12%;
-    --primary: 225 75% 55%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 220 14% 90%;
-    --secondary-foreground: 224 20% 12%;
-    --muted: 220 14% 92%;
-    --muted-foreground: 220 10% 46%;
-    --accent: 225 75% 55%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 220 13% 87%;
-    --input: 220 13% 87%;
-    --ring: 225 75% 55%;
+    /* Atlas Light Theme */
+    --background: 244 242 241; /* #F4F2F1 */
+    --foreground: 26 26 27;
+    --card: 255 255 255;
+    --card-foreground: 26 26 27;
+    --popover: 255 255 255;
+    --popover-foreground: 26 26 27;
+    --primary: 24 44 196; /* #182CC4 */
+    --primary-foreground: 255 255 255;
+    --secondary: 220 220 220;
+    --secondary-foreground: 26 26 27;
+    --muted: 235 235 235;
+    --muted-foreground: 100 100 100;
+    --accent: 24 44 196;
+    --accent-foreground: 255 255 255;
+    --destructive: 220 38 38;
+    --destructive-foreground: 255 255 255;
+    --border: 220 220 220;
+    --input: 220 220 220;
+    --ring: 24 44 196;
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 225 75% 55%;
+    --sidebar-background: 244 242 241;
+    --sidebar-foreground: 26 26 27;
+    --sidebar-primary: 24 44 196;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 235 235 235;
+    --sidebar-accent-foreground: 26 26 27;
+    --sidebar-border: 220 220 220;
+    --sidebar-ring: 24 44 196;
   }
 
   .dark {
-    --background: 228 12% 10%;
-    --foreground: 220 14% 96%;
-    --card: 228 12% 13%;
-    --card-foreground: 220 14% 96%;
-    --popover: 228 12% 13%;
-    --popover-foreground: 220 14% 96%;
-    --primary: 225 75% 57%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 228 10% 18%;
-    --secondary-foreground: 220 14% 90%;
-    --muted: 228 10% 18%;
-    --muted-foreground: 220 10% 55%;
-    --accent: 225 75% 57%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 228 10% 20%;
-    --input: 228 10% 20%;
-    --ring: 225 75% 57%;
+    /* Atlas Dark Theme */
+    --background: 39 39 39; /* #272727 - Note ekranı */
+    --foreground: 244 242 241;
+    --card: 45 45 45;
+    --card-foreground: 244 242 241;
+    --popover: 45 45 45;
+    --popover-foreground: 244 242 241;
+    --primary: 24 44 196; /* #182CC4 */
+    --primary-foreground: 255 255 255;
+    --secondary: 50 50 50;
+    --secondary-foreground: 244 242 241;
+    --muted: 50 50 50;
+    --muted-foreground: 160 160 160;
+    --accent: 24 44 196;
+    --accent-foreground: 255 255 255;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --border: 50 50 50;
+    --input: 50 50 50;
+    --ring: 24 44 196;
 
-    --sidebar-background: 228 12% 8%;
-    --sidebar-foreground: 220 14% 90%;
-    --sidebar-primary: 225 75% 57%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 228 10% 15%;
-    --sidebar-accent-foreground: 220 14% 90%;
-    --sidebar-border: 228 10% 18%;
-    --sidebar-ring: 225 75% 57%;
+    --sidebar-background: 39 39 39; /* #272727 */
+    --sidebar-foreground: 244 242 241;
+    --sidebar-primary: 24 44 196;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 50 50 50;
+    --sidebar-accent-foreground: 244 242 241;
+    --sidebar-border: 50 50 50;
+    --sidebar-ring: 24 44 196;
+  }
+
+  /* Giriş ekranı için özel dark background */
+  .workspace-selector-dark {
+    background-color: #1A1A1B !important;
   }
 }
+
 @layer base {
   * {
     border-color: hsl(var(--border));
@@ -144,22 +152,15 @@
 
 /* Print Styles - PDF Export Optimization */
 @media print {
-  /* Hide UI elements */
-  header,
-  nav,
-  aside,
-  button,
-  .no-print {
+  header, nav, aside, button, .no-print {
     display: none !important;
   }
 
-  /* Reset page margins */
   @page {
     margin: 2cm;
     size: A4;
   }
 
-  /* Body optimization */
   body {
     background: white !important;
     color: black !important;
@@ -167,7 +168,6 @@
     line-height: 1.5;
   }
 
-  /* Prevent page breaks inside elements */
   h1, h2, h3, h4, h5, h6 {
     page-break-after: avoid;
     page-break-inside: avoid;
@@ -177,7 +177,6 @@
     page-break-inside: avoid;
   }
 
-  /* Code blocks */
   pre, code {
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -186,25 +185,21 @@
     padding: 8px;
   }
 
-  /* Images and diagrams */
   img, svg {
     max-width: 100%;
     page-break-inside: avoid;
   }
 
-  /* Mermaid diagrams */
   .mermaid-diagram {
     page-break-inside: avoid;
     max-width: 100%;
   }
 
-  /* Links */
   a {
     color: #0066cc;
     text-decoration: underline;
   }
 
-  /* Print URLs after links */
   a[href]:after {
     content: " (" attr(href) ")";
     font-size: 0.8em;
