@@ -6,8 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [1.2.0] - 2026-02-27
+### Added
+- **Custom PDF Export Engine**: Implemented a coordinate-based rendering system using `jsPDF` for higher precision.
+- **High-Res Mermaid Support**: Added a 2x scale rendering pipeline for Mermaid diagrams using HTML5 Canvas.
+- **Markdown Export**: Integrated `TurndownService` with custom fencers for Mermaid blocks.
+- **Sanitized Filenaming**: Logic to auto-clean filenames for cross-OS compatibility.
 
-## [1.1.0] - 2025-02-14
+### Changed
+- **Print Optimization**: Overhauled `index.css` with a robust `@media print` layer (A4 standard, 2cm margins, 12pt typography).
+- **DOM Traversal**: Switched to a recursive `processNode` algorithm in `export-utils.ts` to preserve nested HTML styles.
+- **Asset Loading**: Moved to an asynchronous `Promise`-based model for image and SVG rendering to prevent race conditions during export.
+
+### Fixed
+- **UI Bleed**: Resolved issue where navigation buttons and sidebars were visible in PDF exports.
+- **Layout Breaks**: Improved page-break logic for headers and code blocks.
+
+
+---
+
+## [1.1.0] - 2026-02-14
 
 ###  Added
 - Hash-based routing for better navigation structure
@@ -32,7 +50,7 @@ Special thanks to ** @dreamer_948 ** for the detailed code review and suggestion
 
 ---
 
-## [1.0.0] - 2025-02-12
+## [1.0.0] - 2026-02-12
 
 ###  Initial Release
 
