@@ -15,7 +15,8 @@
 ![Last Commit](https://img.shields.io/github/last-commit/CBYeuler/Atlas-Workspace-Local)
 
 
-<img width="1395" height="934" alt="Atlasss" src="https://github.com/user-attachments/assets/2a42d34d-c85e-471e-a51a-96a4e234b33b" />
+<img width="1143" height="754" alt="Screenshot from 2026-03-06 18-20-04" src="https://github.com/user-attachments/assets/e34fb590-7667-456a-9c88-174d2b2b6d11" />
+
 
 **A modern, offline-first markdown/pdf workspace for developers**
 
@@ -39,6 +40,7 @@ Goal was to work offline, and maintain full control of your data
     
 -   Horizontal rules
     
+<img width="1395" height="934" alt="Atlasss" src="https://github.com/user-attachments/assets/2a42d34d-c85e-471e-a51a-96a4e234b33b" />
 
 ### Mermaid Diagrams
 
