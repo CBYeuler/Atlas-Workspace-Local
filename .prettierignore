@@ -1,0 +1,6 @@
+dist
+dist-electron
+node_modules
+build
+coverage
+*.md
