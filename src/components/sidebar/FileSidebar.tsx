@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { useState } from "react";
+=======
+import { useState, useEffect } from "react";
+>>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
 import {
   Plus,
   FileText,
@@ -7,12 +11,19 @@ import {
   MoreHorizontal,
   PanelLeftClose,
   FolderOpen,
+<<<<<<< HEAD
   ChevronDown,
+=======
+>>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { useWorkspace } from "@/contexts/WorkspaceContext";
+<<<<<<< HEAD
+=======
+import { formatDistanceToNow } from "date-fns";
+>>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -30,6 +41,10 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+<<<<<<< HEAD
+=======
+import { Skeleton } from "@/components/ui/skeleton";
+>>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
 
 interface DashboardSidebarProps {
   collapsed: boolean;
@@ -45,6 +60,7 @@ export default function DashboardSidebar({
   onMobileClose,
 }: DashboardSidebarProps) {
   const { 
+<<<<<<< HEAD
     currentVault,
     vaults,
     files, 
@@ -66,6 +82,35 @@ export default function DashboardSidebar({
       await createFile(newNoteName);
       setNewNoteName('');
       setShowNewNoteInput(false);
+=======
+    workspacePath, 
+    files, 
+    currentFile, 
+    loadFile, 
+    loadWorkspace 
+  } = useWorkspace();
+  
+  const [deleteTarget, setDeleteTarget] = useState<{ path: string; name: string } | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Reload workspace periodically (file watcher simulation)
+  useEffect(() => {
+    if (!workspacePath) return;
+    const interval = setInterval(() => {
+      loadWorkspace(workspacePath);
+    }, 5000); // Refresh every 5 seconds
+    return () => clearInterval(interval);
+  }, [workspacePath, loadWorkspace]);
+
+  const handleCreateNote = async () => {
+    if (!workspacePath) return;
+    const timestamp = Date.now();
+    const filename = `note-${timestamp}`;
+    try {
+      const filepath = await window.api.createFile(workspacePath, filename);
+      await loadWorkspace(workspacePath);
+      await loadFile(filepath);
+>>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
     } catch (error) {
       console.error('Error creating note:', error);
     }
@@ -74,7 +119,18 @@ export default function DashboardSidebar({
   const handleDeleteNote = async () => {
     if (!deleteTarget) return;
     try {
+<<<<<<< HEAD
       await deleteFile(deleteTarget.path);
+=======
+      await window.api.deleteFile(deleteTarget.path);
+      if (currentFile === deleteTarget.path) {
+        // If we deleted the current file, clear selection
+        loadFile(''); // This will clear currentFile
+      }
+      if (workspacePath) {
+        await loadWorkspace(workspacePath);
+      }
+>>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
     } catch (error) {
       console.error('Error deleting note:', error);
     } finally {
@@ -82,6 +138,17 @@ export default function DashboardSidebar({
     }
   };
 
+<<<<<<< HEAD
+=======
+  const handleSelectWorkspace = async () => {
+    const path = await window.api.selectWorkspace();
+    if (path && workspacePath !== path) {
+      await loadWorkspace(path);
+    }
+  };
+
+  // Sort files by name
+>>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
   const sortedFiles = [...files].sort((a, b) => 
     a.name.localeCompare(b.name)
   );
@@ -103,6 +170,7 @@ export default function DashboardSidebar({
 
   const SidebarContent = () => (
     <div className="flex h-full flex-col bg-sidebar-background">
+<<<<<<< HEAD
       {/* Header with Vault Dropdown */}
       <div className="flex items-center justify-between border-b border-sidebar-border px-4 py-3">
         <DropdownMenu>
@@ -148,10 +216,30 @@ export default function DashboardSidebar({
           </DropdownMenuContent>
         </DropdownMenu>
 
+=======
+      {/* Header */}
+      <div className="flex items-center justify-between border-b border-sidebar-border px-4 py-3">
+        <div className="flex items-center gap-2">
+          <FolderOpen className="h-5 w-5 text-sidebar-foreground" />
+          <span className="font-semibold text-sidebar-foreground">Notes</span>
+        </div>
+>>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
         <div className="flex items-center gap-1">
           <Button
             variant="ghost"
             size="icon"
+<<<<<<< HEAD
+=======
+            onClick={handleSelectWorkspace}
+            className="h-8 w-8 text-sidebar-foreground hover:text-sidebar-primary"
+            title="Change workspace"
+          >
+            <FolderOpen className="h-4 w-4" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+>>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
             onClick={onToggleCollapse}
             className="hidden md:flex h-8 w-8 text-sidebar-foreground hover:text-sidebar-primary"
           >
@@ -170,6 +258,7 @@ export default function DashboardSidebar({
 
       {/* Actions */}
       <div className="border-b border-sidebar-border px-3 py-3">
+<<<<<<< HEAD
         {showNewNoteInput ? (
           <div className="space-y-2">
             <Input
@@ -217,11 +306,31 @@ export default function DashboardSidebar({
             New Note
           </Button>
         )}
+=======
+        <Button
+          onClick={handleCreateNote}
+          className="w-full justify-start gap-2 bg-sidebar-primary text-sidebar-primary-foreground hover:bg-sidebar-primary/90"
+          size="sm"
+        >
+          <Plus className="h-4 w-4" />
+          New Note
+        </Button>
+>>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
       </div>
 
       {/* Files List */}
       <div className="flex-1 overflow-y-auto px-2 py-2">
+<<<<<<< HEAD
         {sortedFiles.length === 0 ? (
+=======
+        {isLoading ? (
+          <div className="space-y-2">
+            {[1, 2, 3].map((i) => (
+              <Skeleton key={i} className="h-10 w-full" />
+            ))}
+          </div>
+        ) : sortedFiles.length === 0 ? (
+>>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
           <div className="px-2 py-8 text-center text-sm text-sidebar-foreground/60">
             No notes yet. Create one to get started!
           </div>
@@ -279,6 +388,31 @@ export default function DashboardSidebar({
           {files.length} {files.length === 1 ? 'note' : 'notes'}
         </div>
       </div>
+<<<<<<< HEAD
+=======
+    </div>
+  );
+
+  // Desktop sidebar
+  if (!mobileOpen) {
+    return (
+      <div className="hidden md:flex w-64 border-r border-border">
+        <SidebarContent />
+      </div>
+    );
+  }
+
+  // Mobile sidebar (overlay)
+  return (
+    <>
+      <div
+        className="fixed inset-0 z-40 bg-background/80 backdrop-blur-sm md:hidden"
+        onClick={onMobileClose}
+      />
+      <div className="fixed inset-y-0 left-0 z-50 w-64 md:hidden">
+        <SidebarContent />
+      </div>
+>>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
 
       {/* Delete confirmation dialog */}
       <AlertDialog open={!!deleteTarget} onOpenChange={() => setDeleteTarget(null)}>
@@ -297,6 +431,7 @@ export default function DashboardSidebar({
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+<<<<<<< HEAD
     </div>
   );
 
@@ -317,6 +452,8 @@ export default function DashboardSidebar({
       <div className="fixed inset-y-0 left-0 z-50 w-64 md:hidden">
         <SidebarContent />
       </div>
+=======
+>>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
     </>
   );
 }

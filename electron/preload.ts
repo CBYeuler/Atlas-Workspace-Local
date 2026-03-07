@@ -1,5 +1,6 @@
 import { contextBridge, ipcRenderer } from 'electron';
 
+<<<<<<< HEAD
 contextBridge.exposeInMainWorld('api', {
   // Vaults
   getVaults: () => ipcRenderer.invoke('get-vaults'),
@@ -17,4 +18,13 @@ contextBridge.exposeInMainWorld('api', {
   // Export
   exportVault: (vaultPath: string) => ipcRenderer.invoke('export-vault', vaultPath),
   exportNote: (filepath: string) => ipcRenderer.invoke('export-note', filepath),
+=======
+// Expose safe IPC methods to renderer
+contextBridge.exposeInMainWorld('api', {
+  selectWorkspace: () => ipcRenderer.invoke('select-workspace'),
+  readWorkspace: (workspacePath: string) => ipcRenderer.invoke('read-workspace', workspacePath),
+  readFile: (filepath: string) => ipcRenderer.invoke('read-file', filepath),
+  saveFile: (filepath: string, content: string) => ipcRenderer.invoke('save-file', filepath, content),
+  createFile: (folderPath: string, filename: string) => ipcRenderer.invoke('create-file', folderPath, filename)
+>>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
 });
