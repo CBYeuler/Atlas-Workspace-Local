@@ -1,0 +1,617 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 5027
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F2 22 Tf
+25.2999999999999972 TL
+0 g
+56.6929133858267775 785.1970866141732586 Td
+(note 1770998228778) Tj
+ET
+0.78 G
+56.6929133858267775 739.8427559055118081 m
+538.5870866141731312 739.8427559055118081 l
+S
+BT
+/F2 18 Tf
+20.6999999999999993 TL
+0 g
+56.6929133858267775 717.1655905511811397 Td
+(Atlas Workspace) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0 g
+56.6929133858267775 680.3151968503937042 Td
+(A modern, offline-first markdown/pdf workspace for developers) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+56.6929133858267775 646.2994488188976447 Td
+(Atlas Workspace is a local-first note-taking application built with electron, React and Typescript.) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+56.6929133858267775 615.1183464566928478 Td
+(Goal was to work offline, and maintain full control of your data) Tj
+ET
+BT
+/F2 15 Tf
+17.25 TL
+0 g
+56.6929133858267775 575.4333070866141497 Td
+(Feautures) Tj
+ET
+BT
+/F2 13 Tf
+14.9499999999999993 TL
+0 g
+56.6929133858267775 549.9214960629921052 Td
+(Rich Markdown Editing) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+62.3622047244094517 527.2443307086614368 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+79.3700787401574814 527.2443307086614368 Td
+(** Bold **, * italic *, ~~ strikethrough ~~, and ` inline code `) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+62.3622047244094517 507.4018110236219741 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+79.3700787401574814 507.4018110236219741 Td
+(Headings \(H1, H2, H3\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+62.3622047244094517 487.559291338582625 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+79.3700787401574814 487.559291338582625 Td
+(Lists \(ordered and unordered\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+62.3622047244094517 467.716771653543276 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+79.3700787401574814 467.716771653543276 Td
+(Code blocks with syntax highlighting) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+62.3622047244094517 447.8742519685038701 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+79.3700787401574814 447.8742519685038701 Td
+(Blockquotes) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+62.3622047244094517 428.0317322834645211 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+79.3700787401574814 428.0317322834645211 Td
+(Horizontal rules) Tj
+ET
+BT
+/F2 13 Tf
+14.9499999999999993 TL
+0 g
+56.6929133858267775 391.1813385826770855 Td
+(Mermaid Diagrams) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+56.6929133858267775 368.5041732283464171 Td
+(Create flowcharts,sequence diagrams, and more directly in your notes:) Tj
+ET
+0.94 g
+56.6929133858267775 345.8270078740156919 481.8941732283464034 -45.354330708661422 re
+f
+BT
+/F5 9 Tf
+10.3499999999999996 TL
+0 g
+68.031496062992133 337.323070866141677 Td
+( ) Tj
+T* (graph TD A[Start] --> B[Write Notes] B --> C[Add Diagrams] C --> D[Export] D --> E[Share] ) Tj
+ET
+BT
+/F2 13 Tf
+14.9499999999999993 TL
+0 g
+56.6929133858267775 283.4648031496062686 Td
+(Local-First Architecture) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+62.3622047244094517 260.7876377952754865 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+79.3700787401574814 260.7876377952754865 Td
+(No cloud required  - all data stays on your machine) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+62.3622047244094517 240.9451181102361943 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+79.3700787401574814 240.9451181102361943 Td
+(No auth - just open a folder and start writing) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+62.3622047244094517 221.1025984251967884 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+79.3700787401574814 221.1025984251967884 Td
+(No subscription - completely free forever) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+62.3622047244094517 201.2600787401573825 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+79.3700787401574814 201.2600787401573825 Td
+(Git-friendly - plain markdown files you can version control) Tj
+ET
+BT
+/F2 13 Tf
+14.9499999999999993 TL
+0 g
+56.6929133858267775 172.9136220472439618 Td
+(Dev Focused) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+62.3622047244094517 150.2364566929132934 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+79.3700787401574814 150.2364566929132934 Td
+(designed for technical documentation) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+62.3622047244094517 130.3939370078738875 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+79.3700787401574814 130.3939370078738875 Td
+(code block support) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+62.3622047244094517 110.5514173228345953 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+79.3700787401574814 110.5514173228345953 Td
+(mermaid diagram integration) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+62.3622047244094517 90.7088976377951894 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0 g
+79.3700787401574814 90.7088976377951894 Td
+(dark mode by default) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.588 g
+283.5099999999999341 28.3464566929134207 Td
+(Page 1) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 1101
+>>
+stream
+0.5670000000000001 w
+0.78 G
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0. g
+62.3622047244094517 785.1970866141732586 Td
+(• ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0. g
+79.3700787401574814 785.1970866141732586 Td
+(keyboard shortcuts) Tj
+ET
+BT
+/F2 13 Tf
+14.9499999999999993 TL
+0. g
+56.6929133858267775 756.8506299212598378 Td
+(Export options) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0. g
+62.3622047244094517 734.1734645669291695 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0. g
+79.3700787401574814 734.1734645669291695 Td
+(Export to Markdown\(.md\)) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0. g
+62.3622047244094517 705.8270078740157487 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0. g
+79.3700787401574814 705.8270078740157487 Td
+(Export to PDF with preserved formatting) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0. g
+62.3622047244094517 685.9844881889763428 Td
+(• ) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0. g
+79.3700787401574814 685.9844881889763428 Td
+(Diagrams render properly) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.588 g
+283.5099999999999341 28.3464566929134207 Td
+(Page 2) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R ]
+/Count 2
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 7 0 R
+/F2 8 0 R
+/F3 9 0 R
+/F4 10 0 R
+/F5 11 0 R
+/F6 12 0 R
+/F7 13 0 R
+/F8 14 0 R
+/F9 15 0 R
+/F10 16 0 R
+/F11 17 0 R
+/F12 18 0 R
+/F13 19 0 R
+/F14 20 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+21 0 obj
+<<
+/Producer (jsPDF 4.1.0)
+/CreationDate (D:20260213191502+03'00')
+>>
+endobj
+22 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 23
+0000000000 65535 f 
+0000006521 00000 n 
+0000008346 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000005231 00000 n 
+0000005368 00000 n 
+0000006584 00000 n 
+0000006709 00000 n 
+0000006839 00000 n 
+0000006972 00000 n 
+0000007110 00000 n 
+0000007234 00000 n 
+0000007363 00000 n 
+0000007495 00000 n 
+0000007631 00000 n 
+0000007759 00000 n 
+0000007886 00000 n 
+0000008015 00000 n 
+0000008148 00000 n 
+0000008250 00000 n 
+0000008596 00000 n 
+0000008682 00000 n 
+trailer
+<<
+/Size 23
+/Root 22 0 R
+/Info 21 0 R
+/ID [ <C66EC068CFC3E7F89631D98D769B02E0> <C66EC068CFC3E7F89631D98D769B02E0> ]
+>>
+startxref
+8786
+%%EOF
