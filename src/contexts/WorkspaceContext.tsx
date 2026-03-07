@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
 
 interface Vault {
@@ -8,9 +7,6 @@ interface Vault {
   lastOpened: string;
   created: string;
 }
-=======
-import React, { createContext, useContext, useState, useCallback } from 'react';
->>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
 
 interface FileItem {
   name: string;
@@ -19,7 +15,6 @@ interface FileItem {
 }
 
 interface WorkspaceContextType {
-<<<<<<< HEAD
   vaults: Vault[];
   currentVault: Vault | null;
   files: FileItem[];
@@ -33,35 +28,17 @@ interface WorkspaceContextType {
   saveFile: (path: string, content: string) => Promise<void>;
   createFile: (filename: string) => Promise<void>;
   deleteFile: (path: string) => Promise<void>;
-=======
-  workspacePath: string | null;
-  files: FileItem[];
-  currentFile: string | null;
-  currentContent: string;
-  setWorkspacePath: (path: string | null) => void;
-  setFiles: (files: FileItem[]) => void;
-  setCurrentFile: (path: string | null) => void;
-  setCurrentContent: (content: string) => void;
-  loadWorkspace: (path: string) => Promise<void>;
-  loadFile: (path: string) => Promise<void>;
-  saveFile: (path: string, content: string) => Promise<void>;
->>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
 }
 
 const WorkspaceContext = createContext<WorkspaceContextType | undefined>(undefined);
 
 export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
-<<<<<<< HEAD
   const [vaults, setVaults] = useState<Vault[]>([]);
   const [currentVault, setCurrentVault] = useState<Vault | null>(null);
-=======
-  const [workspacePath, setWorkspacePath] = useState<string | null>(null);
->>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
   const [files, setFiles] = useState<FileItem[]>([]);
   const [currentFile, setCurrentFile] = useState<string | null>(null);
   const [currentContent, setCurrentContent] = useState<string>('');
 
-<<<<<<< HEAD
   // Load vaults on mount
   const loadVaults = useCallback(async () => {
     try {
@@ -94,7 +71,7 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
       setFiles(result.files);
       setCurrentFile(null);
       setCurrentContent('');
-      await loadVaults(); // Refresh vault list
+      await loadVaults();
     } catch (error) {
       console.error('Error opening vault:', error);
       throw error;
@@ -117,14 +94,6 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
     }
   }, [currentVault, loadVaults]);
 
-=======
-  const loadWorkspace = useCallback(async (path: string) => {
-    setWorkspacePath(path);
-    const workspaceFiles = await window.api.readWorkspace(path);
-    setFiles(workspaceFiles);
-  }, []);
-
->>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
   const loadFile = useCallback(async (path: string) => {
     if (!path) {
       setCurrentFile(null);
@@ -132,7 +101,6 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
       return;
     }
     
-<<<<<<< HEAD
     try {
       const content = await window.api.readFile(path);
       setCurrentFile(path);
@@ -158,10 +126,8 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
     
     try {
       const filepath = await window.api.createFile(currentVault.path, filename);
-      // Refresh files
       const result = await window.api.openVault(currentVault.id);
       setFiles(result.files);
-      // Load the new file
       await loadFile(filepath);
     } catch (error) {
       console.error('Error creating file:', error);
@@ -178,7 +144,6 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
         setCurrentFile(null);
         setCurrentContent('');
       }
-      // Refresh files
       const result = await window.api.openVault(currentVault.id);
       setFiles(result.files);
     } catch (error) {
@@ -203,32 +168,6 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
         saveFile,
         createFile,
         deleteFile,
-=======
-    const content = await window.api.readFile(path);
-    setCurrentFile(path);
-    setCurrentContent(content);
-  }, []);
-
-  const saveFile = useCallback(async (path: string, content: string) => {
-    await window.api.saveFile(path, content);
-    setCurrentContent(content);
-  }, []);
-
-  return (
-    <WorkspaceContext.Provider
-      value={{
-        workspacePath,
-        files,
-        currentFile,
-        currentContent,
-        setWorkspacePath,
-        setFiles,
-        setCurrentFile,
-        setCurrentContent,
-        loadWorkspace,
-        loadFile,
-        saveFile,
->>>>>>> 8602c60e7d725e8638f2b285398ff308c6a0d674
       }}
     >
       {children}
