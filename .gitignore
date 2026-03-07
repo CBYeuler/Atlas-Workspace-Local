@@ -1,10 +1,62 @@
+# Dependencies
 node_modules/
+.pnpm-debug.log*
+
+# Build outputs
 dist/
 dist-electron/
-*.tsbuildinfo
+out/
+build/
+
+# Electron
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Testing
+coverage/
+.nyc_output/
+
+# Environment
 .env
-*.d.ts
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# Atlas-specific - IMPORTANT!
+note-*.md
+*.md.backup
+.atlas-vaults/
+
+# Compiled files
 *.js.map
-electron/*.js
-electron/*.d.ts
-dist-electron/
+*.d.ts
+!vite-env.d.ts
+!src/types/*.d.ts
+
+# Package manager
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Temporary
+tmp/
+temp/
+.cache/
+
+# vite.config.js (we use .ts only)
+vite.config.js
